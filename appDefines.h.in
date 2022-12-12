@@ -1,0 +1,16 @@
+#ifndef __appDefines_h
+#define __appDefines_h
+
+//--------------------------------------------------------------------------
+// Data root used to reach data for testing
+//--------------------------------------------------------------------------
+
+#define APP_NAME "@PROJECT_NAME@"
+#define APP_VER "@PROJECT_VERSION@"
+
+#define APP_SOURCE_DIR "@PROJECT_SOURCE_DIR@"
+#define APP_BINARY_DIR "@PROJECT_BINARY_DIR@"
+
+#define APP_ASSETS_DIR "@PROJECT_SOURCE_DIR@/Assets"
+
+#endif // __appDefines_h

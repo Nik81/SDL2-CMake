@@ -1,0 +1,28 @@
+# Program:   myAppSLD
+# Module:    CMakeLists.txt
+# Language:  CMake 3.0
+# Date:      $Date: 2022-10-30
+#
+# Description:
+# CMake Project file for myAppSDL
+
+PROJECT (App)
+
+MESSAGE(" Configure: ${PROJECT_NAME}")
+
+SET(PROJECT_SRCS 
+  main.cpp
+  myGame.cpp myGame.h
+)
+
+ADD_EXECUTABLE(${PROJECT_NAME} ${PROJECT_SRCS})
+target_link_libraries(App ${SDL2_LIBRARIES} Core)
+
+# Copy dll files to Binary Dir
+file(COPY ${SDL2_LIBRARY}/SDL2.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${SDL2_IMAGE_LIBRARY}/SDL2_image.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR})		
+file(COPY ${SDL2_IMAGE_LIBRARY}/zlib1.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${SDL2_IMAGE_LIBRARY}/libpng16-16.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${SDL2_TTF_LIBRARY}/SDL2_ttf.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${SDL2_TTF_LIBRARY}/libfreetype-6.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${SDL2_MIXER_LIBRARY}/SDL2_mixer.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
