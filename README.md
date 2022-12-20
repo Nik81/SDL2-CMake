@@ -3,6 +3,6 @@ Basic CMake project for an SDL2 App
 
 - Create a Visual Studio solution
 - Create App and Core projects
-- Include SLD, SDL_IMAGE, SDL_TTF libraries
+- Include SLD, SDL_IMAGE, SDL_TTF, SDL_MIXER libraries
 - Copy the dll files to the destination folder
 - Generate an appDefine.h file with the main configurations
